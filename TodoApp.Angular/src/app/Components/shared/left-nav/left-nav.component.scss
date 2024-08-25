@@ -1,0 +1,92 @@
+@use "../../../../styles.scss" as *;
+
+.left-nav-container{
+    height: 100%;
+    width: 20rem;
+    .logo-container{
+        height: 93px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    .logo{
+        height: 9%;
+        margin-bottom: 60px ;
+
+        h1{
+            font-size: 2.25rem;
+            line-height: 2.81rem;
+            color: $primary-color-bold;
+            font-weight: 700;
+            
+        }
+    }
+    .option-container{
+        width: 100%;
+        height: 91%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        button{
+            width: 13.75rem;
+            min-width: 170px !important;
+            max-width: 250px;
+            height:4.25rem;
+            border: none;
+            border-radius: 0.75rem;
+            background-color: white;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+            min-height: 50px;
+            .button-text{
+                width: 74.5%;
+                height: 58.9%;
+                justify-content: space-around;
+                align-items: center;
+                P{
+                    font-size:1.25rem;
+                    line-height: 1.56rem;
+                    font-weight: 400;
+                }
+                .add-icon{
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    border-radius: 50%;
+                    background-color: $primary-color-bold;
+                    color: white;
+                }
+            }
+        }
+        .nav-item-container{
+            ul{
+                list-style-type: none;
+                width: 100%;
+                padding: 0;
+                li{
+                    display: block;
+                    width: 100%;
+                    height: 44px;
+                    margin-bottom: 21px;
+                    a{
+                        text-decoration: none;
+                        text-align: center;
+                        height: 100%;
+                        font-size: 1rem;
+                        line-height: 1.25rem;
+                        color: black;
+                        .link-active{
+                            background-color: $primary-color-light;
+                        }
+                        &:hover{
+                            background-color: $primary-color-light;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

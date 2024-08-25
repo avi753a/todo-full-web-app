@@ -1,0 +1,46 @@
+<app-top-nav PageName="Dashboard"></app-top-nav>
+<div class="container-fluid p-0 d-flex justify-content-center align-items-center h-100">
+    <div class="dashboard d-flex flex-column align-items-center">
+        <div class="hero-container">
+            <div class="hero d-flex flex-row justify-content-between align-items-center">
+                <div class="hero-name d-flex flex-column justify-content-evenly align-items-start">
+                    <h1>Hello, {{username}}!</h1>
+                    <p class=" d-block">What do you want to do today?</p>
+                </div>
+                <div class="hero-image float-end">
+                    <img src="./assets/images/women.png" alt="" class="float-end hero-image">
+                </div>
+            </div>
+        </div>
+        <div class="stat-container d-flex flex-column-reverse flex-md-row justify-content-between">
+            <div class="task-info d-flex flex-column w-100">
+                <div class="heading w-100 d-flex flex-row justify-content-between">
+                    <h3 *ngIf="isToday">Today's Tasks</h3>
+                    <h3 *ngIf="!isToday">Tasks on {{ selectedDate.toLocaleDateString() }}</h3>
+                    <div class="actions d-flex flex-row justify-content-between justify-content-md-end align-items-center">
+                        <p class="delete-all text-primary" (click)="deleteAll()">Delete All</p>
+                        <span class="d-md-none">
+                            <p>{{dateText}}</p>
+                            <input type="date" (change)="applyDateFilter($event)" [(ngModel)]="selectedDate">
+                        </span>
+                    </div>
+                </div>
+                <div class="task-list w-100 d-flex flex-column">
+                    <ul style="list-style-type: none;" class="w-100 p-0">
+                        <li *ngFor="let item of taskList; " class="w-100">
+                          <app-task-item [taskDetails]="item"></app-task-item>
+                          
+                        </li>
+                      </ul>
+                </div>
+            </div>
+            <div class="card-container d-flex flex-column align-items-end ms-md-2">
+                <div class="date-info d-md-flex d-none align-items-center">
+                    <p>{{dateText}}</p>
+                    <input type="date"  (change)="applyDateFilter($event)">
+                </div>
+                <app-stat-cards [activeCount]="activeCount" [completedCount]="completedCount"></app-stat-cards>
+            </div>
+        </div>
+    </div>
+</div>

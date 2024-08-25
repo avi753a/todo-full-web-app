@@ -1,0 +1,25 @@
+<div class="container-fluid" [className]="isSignUp?'login':'signUp'">
+    <div class="login-main col-12 col-sm-10 col-md-8 col-lg-8">
+        <div class="login-content">
+            <div class="title">
+                <h1 class="">To-Do App</h1>
+                <p>Start organizing your life day by day</p>
+            </div>
+            <div class="login-form" >
+                <form action=""(ngSubmit)="onSubmit()" [formGroup]="loginForm" >
+                <div class="login-inputs">
+                    <input type="text" name="username" id="username" placeholder="Enter your username" formControlName="username">
+                    <input type="password" name="password" id="password" placeholder="Enter your password" formControlName="password" (change)="checkValidation($event)">
+                </div>
+                <div class="login-buttons">
+                    <button type="submit">{{isSignUp?"Login":"SignUp"}}</button>
+                    <p *ngIf="!isSignUp">Don’t have an account? Create <a #signup (click)="toggleForm()">here</a>.</p>
+                    <p *ngIf="isSignUp">Already have an account? Sign in <a #login (click)="toggleForm()">here</a>.</p>
+
+                </div> 
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<p-toast/>

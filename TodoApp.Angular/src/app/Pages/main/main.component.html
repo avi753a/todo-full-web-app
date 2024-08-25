@@ -1,0 +1,15 @@
+<div class="container-fluid d-flex main-container flex-column flex-md-row p-0" [class.blur]="navService.isFormDisplay">
+    <div class="d-flex d-md-block nav-container">
+        <app-nav-bar class="w-100"></app-nav-bar>
+    </div>
+    <div class="content w-sm-100">
+      <router-outlet></router-outlet>
+    </div>
+</div>
+<div *ngIf="(loaderService.isLoading$ | async)" class="spinner-overlay">
+  <app-loader class="loader"></app-loader>
+</div>
+<div class="form-container w-100 d-flex align-items-center justify-content-center " [class.show]="navService.isFormDisplay" [class.display-none]="!navService.isFormDisplay">
+  <app-task-form class="w-form"></app-task-form>
+</div>
+<p-toast/>

@@ -1,0 +1,84 @@
+@use "../../../styles.scss" as *;
+
+
+@layer reset, primeng;
+
+
+@media screen and (min-width:768px) {
+    .nav-container{
+    width: 20rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .nav-container{
+    width: 100%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    .nav-container{
+    width: 25% !important;
+    }
+}
+.content{
+    flex:1;
+    height: 100vh;
+    // overflow: hidden;
+
+}
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+}
+
+.main-container{
+    height: 100vh !important;
+    position: relative;
+    z-index: 1;
+    &.blur{
+        filter: blur(3px);
+        overflow: hidden;
+        pointer-events:none;
+    }
+
+}
+.w-90{
+    width: 90%;
+}
+
+@media screen and (min-width:768px) {
+    .form-container{
+        position: absolute;
+        top: 20%;
+        color: #B5B5B5;   
+        // left: 20%;
+        z-index: 5;
+    }
+    .w-form{
+        width: 61%;
+    }
+}
+@media screen and (max-width:768px) {
+    .form-container{
+        position: absolute;
+        top: 20%;
+        color: #B5B5B5;   
+        // left: 10%;
+        .w-form{
+            width: 90%;
+        }
+        z-index: 5;
+    }
+}
+
+.task-form.show {
+    display: flex !important;
+}
+
+.display-none {
+    display: none !important;
+}

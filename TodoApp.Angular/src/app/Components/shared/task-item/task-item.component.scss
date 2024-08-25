@@ -1,0 +1,268 @@
+@use '../../../../styles.scss' as *;
+
+
+
+@media screen and (min-width:768px) {
+    .task-item {
+        height: 4.5rem;
+        padding-left: 1.5rem;
+        border-radius: 0.75rem;
+        font-family: $primary-font;
+        background-color: white;
+        position: relative;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+    
+        &.completed {
+            background-color: $primary-color-light;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+    
+        .item-check-list {
+            width: 16.43rem;
+            height: 1.75rem;
+    
+            span {
+                font-size: 1.75rem;
+                margin-right: 1.25rem;
+            }
+    
+            p {
+                font-size: 1.25rem;
+                line-height: 1.56rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    
+        .detail-box {
+            width: 26.75rem;
+            height: 22.18rem;
+            box-shadow: 2px 2px 10px 0px #0000001A;
+            background-color: white;
+            position: absolute;
+            right: 1rem;
+            top:1rem;
+            z-index: 3;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+            &.completed{
+                background-color:$primary-color-light;
+                box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+            }
+            
+            .task-detail {
+                width: 22.5rem;
+                height: 18.75rem;
+    
+                .details {
+                    height: 11.87rem;
+                    width: 100%;
+    
+                    .title {
+                        height: 3.93rem;
+    
+                        .title-name {
+                            font-size: 1.75rem;
+                            line-height: 2.18rem;
+                            font-weight: 700;
+                            margin: 0;
+                        }
+    
+                        .title-time {
+                            font-size: 1rem;
+                            line-height: 1.25rem;
+                            color: $font-faded-color;
+                            margin: 0;
+                            &.completed{
+                                color: $primary-color-bold;
+                            }
+                        }
+                    }
+    
+                    .description {
+                        height: 5.437rem;
+                        .heading {
+                            font-size: 1.25rem;
+                            font-weight: 700;
+                            line-height: 1.56rem;
+                            text-align: left;
+                            margin: 0;
+                        }
+                        .text{
+                            font-size: 1.25rem;
+                            font-weight: 400;
+                            line-height: 1.56rem;
+                            margin: 0;
+                            text-align: left;
+                        }
+                    }
+    
+                }
+                .buttons{
+                    span{
+                        font-size: 2.25rem;
+                    }
+                    .update-delete-buttons{
+                        &.completed{
+                            color: $primary-color-bold;
+                        }
+                        .hide{
+                            visibility: hidden;
+                        }
+                        &.completed{
+                            color: $primary-color-bold !important;
+                        }
+                        width: 5rem;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+    
+            }
+    
+        }
+    }
+}
+.show {
+    display: flex !important;
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .detail-box{
+        // font-size: 12px !important;
+        top:0rem !important;
+        transform: scale(0.75);
+
+    }
+}
+@media screen and (max-width:768px) and (min-width:576px)  {
+    .detail-box{
+        // font-size: 12px !important;
+        top:5rem !important;
+        right: 5rem !important;
+        transform: scale(1.5);
+
+    }
+}
+@media screen and (max-width:768px) {
+    .task-item {
+        height: 4.5rem;
+        padding-left: 1.5rem;
+        border-radius: 0.75rem;
+        font-family: $primary-font;
+        background-color: white;
+        position: relative;
+        margin-bottom: 1rem;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    
+        &.completed {
+            background-color: $primary-color-light;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+    
+        .item-check-list {
+            width: 16.43rem;
+            height: 1.75rem;
+    
+            span {
+                font-size: 1rem;
+                margin-right: 0.75rem;
+            }
+    
+            p {
+                font-size: 1rem;
+                line-height: 1.56rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    
+
+    .detail-box {
+        width: 16rem;
+        z-index: 3;
+        height: 14.58rem;
+        box-shadow: 2px 2px 10px 0px #0000001A;
+        background-color: white;
+        position: absolute;
+        right: 0.5rem;
+        top:3rem;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.1);
+        &.completed{
+            background-color:$primary-color-light;
+        }
+        
+        .task-detail {
+            width: 12.66rem;
+            height: 11.91rem;
+
+            .details {
+                height: 7.08rem;
+                width: 100%;
+
+                .title {
+                    height: 2.41rem;
+
+                    .title-name {
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                        font-weight: 700;
+                        margin: 0;
+                    }
+
+                    .title-time {
+                        font-size: 0.75rem;
+                        line-height: 0.866rem;
+                        color: $font-faded-color;
+                        margin: 0;
+                        &.completed{
+                            color: $primary-color-bold;
+                        }
+                    }
+                }
+
+                .description {
+                    height: 3rem;
+                    .heading {
+                        font-size: 0.75em;
+                        font-weight: 700;
+                        line-height: 0.86rem;
+                        text-align: left;
+                        margin: 0;
+                    }
+                    .text{
+                        font-size: 0.75rem;
+                        font-weight: 400;
+                        line-height: 0.86rem;
+                        margin: 0;
+                        text-align: left;
+                    }
+                }
+
+            }
+            .buttons{
+                span{
+                    font-size: 1.5rem;
+                }
+                .update-delete-buttons{
+                    &.completed{
+                        color: $primary-color-bold;
+                    }
+                    .hide{
+                        visibility: hidden;
+                    }
+                    &.completed{
+                        color: $primary-color-bold !important;
+                    }
+                    width: 4.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+        }
+
+    }
+}
+}

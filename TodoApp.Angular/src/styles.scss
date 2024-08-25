@@ -1,0 +1,134 @@
+
+
+$heading-font-color:rgb(186, 81, 18);
+$input-color:#B5B5B5;
+$primary-font:Lexend;
+$primary-color-light: #EDB046;
+$primary-color-bold:#BA5112;
+$font-faded-color:#B5B5B5;
+
+
+$enable-responsive-font-sizes: true;
+
+
+@font-face {
+    font-family: Lexend;
+    src: url(./assets/fonts/Lexend-Regular.ttf);
+}
+@font-face {
+    font-family: icomoon;
+    src: url(./assets/fonts/icomoon.ttf);
+}
+body{
+    font-family: $primary-font !important;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+@mixin text-small{
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+@mixin flex-col-bw{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-row-bw{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+// html {
+//   font-size: 16px; 
+//   font-size: calc(12px + 0.5vw); 
+// }
+
+
+html {
+  font-size: 16px; /* Default font size */
+}
+
+@media (max-width: 1024px) {
+  html {
+      font-size: 14px !important; /* Font size for screens smaller than 1024px */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+      font-size: 12px !important; /* Font size for screens smaller than 768px */
+  }
+}
+
+// @media (min-width: 1450px) {
+//   html {
+//       font-size: 18px !important; /* Larger root font size for larger screens */
+//   }
+// }
+  
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+  .icon-Eye-bold:before {
+    content: "\e906";
+    color: #ba5112;
+  }
+  .icon-eye-light:before {
+    content: "\e907";
+    color: #edb046;
+  }
+  .icon-delete-bold:before {
+    content: "\e908";
+    color: #ba5112;
+  }
+  .icon-Add:before {
+    content: "\e900";
+  }
+  .icon-tick-bold:before {
+    content: "\e901";
+    color: #ba5112;
+  }
+  .icon-tick-light:before {
+    content: "\e902";
+    color: #edb046;
+  }
+  .icon-delete:before {
+    content: "\e903";
+    // color: #edb046;
+  }
+  .icon-edit:before {
+    content: "\e904";
+    // color: #edb046;
+  }
+  .icon-logout:before {
+    content: "\e905";
+  }
+  

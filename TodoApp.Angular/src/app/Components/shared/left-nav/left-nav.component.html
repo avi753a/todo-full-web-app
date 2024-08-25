@@ -1,0 +1,21 @@
+<div class="container-fluid left-nav-container p-0">
+    <div class="logo-container">
+        <app-logo></app-logo>
+    </div>
+    <div class=" option-container">
+        <button class="add-task-button d-flex align-items-center justify-content-center" (click)="showForm()">
+            <div class="button-text d-flex flex-row">
+                <p class="m-0 d-flex align-items-center">Add Task</p>
+                <span class="add-icon icon-Add d-flex align-items-center justify-content-center"></span>
+            </div>
+        </button>
+        <div class="nav-item-container d-flex flex-col align-items-center w-100">
+            <ul>
+                @for (item of navLinks; track $index) {
+                <li><a class="d-flex align-items-center justify-content-center" href="" routerLink={{item.path}} routerLinkActive="link-active">{{item.name}}</a></li>
+                }
+            </ul>
+        </div>
+
+    </div>
+</div>

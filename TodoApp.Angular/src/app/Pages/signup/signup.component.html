@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="signup-main col-12 col-sm-10 col-md-8 col-lg-8">
+        <div class="signup-content">
+            <div class="title">
+                <h1 class="">To-Do App</h1>
+                <p>Start organizing your life day by day</p>
+            </div>
+            <div class="signup-form" >
+                <form action="" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                    <div class="signup-inputs">
+                        <input type="text" name="username" id="username" placeholder="Enter your username"
+                            formControlName="username">
+                        <input type="password" name="password" id="password" placeholder="Enter your password"
+                            formControlName="password" (change)="checkValidation()">
+                    </div>
+                    <div class="signup-buttons">
+                        <button  type="submit">Sign Up</button>
+                        <p>Already have an account? Sign in <a routerLink="/login">here</a>.</p>
+                        <p>SignUp with <a routerLink="/googleauth" class="google">Google</a>.</p>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<p-toast/>

@@ -1,0 +1,117 @@
+@use '../../../../styles.scss' as *;
+.heading-container{
+    height: 100px;
+    margin-bottom: 2.5rem;
+
+    .heading-info{
+        width: 93.5%;
+        height: 52%;
+
+        p{
+            font-size: 1.74rem;
+            line-height:2.81rem;
+            font-weight: 400;
+        }
+        button{
+            width: 9rem;
+            border-radius: 8px;
+            border: none;
+            p{
+                font-size: 1rem;
+                width: 66.8%;
+                color: white;
+                display:inline;
+                margin: 0;
+                span{
+                    font-size: 1rem;
+                    padding-left: 10px;
+                }
+            }
+
+        }
+    }
+}
+.small-nav-container{
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    .nav-info{
+        height:4.66rem;
+        width: 91%;
+        .button-container{
+            width: 14.58rem;
+            height: 26px;
+            max-width: 200px;
+            .sign-out{
+                background-color: $primary-color-bold;
+                border: none;
+                border-radius: 4px;
+                width: 5.75rem;
+                height: 100%;
+                    font-size: 0.66rem;
+                    color: white;
+                    margin: 0;
+                    i{
+                        font-size: 0.66rem;
+                        padding-left: 5px;
+                    }
+                
+            }
+            .add-task {
+                width: 7.83rem;
+                height: 100%;
+                border: none;
+                max-width: 100px;
+                border-radius: 4px;
+                background-color: white;
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+                font-size: 0.66rem;
+                display: flex;
+                align-items: center; /* Center content vertically */
+                justify-content: center; /* Space out the icon and text */
+                padding: 0 10px; /* Adjust padding as needed */
+                
+                i, /* Select the icon */
+                span { /* You can use span if needed */
+                    font-size: 0.66rem;
+                    color: white;
+                    display: flex;
+                    align-items: center; /* Center content vertically */
+                    justify-content: center; /* Center content horizontally */
+                    height: 1.5rem; /* Set height and width for a round shape */
+                    width: 1.5rem; /* Adjust as needed */
+                    border-radius: 50%;
+                    background-color: $primary-color-bold;
+                    text-align: center;
+                    margin-left: 5px;
+                }
+            }
+                
+            }
+        }
+    }
+    .custom-select-container {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 25px;
+        width: 82%;
+
+      .custom-select-sm {
+        width: auto; /* Ensure it adapts to content */
+        max-width: 100%;
+        border: none;
+        background-color: $primary-color-light;
+        height: 25px;
+        width: 100%;
+        border-radius: 4px;
+      }
+      .custom-select-sm option {
+        width: 100%; /* Ensure options match the select width */
+        text-overflow: ellipsis; /* Handle overflow text */
+      }
+
+
+
+}

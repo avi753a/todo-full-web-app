@@ -1,0 +1,255 @@
+@use "../../../styles.scss" as *;
+$head-font-color:white;
+$info-font-color:white;
+$background-color:$primary-color-light;
+$button-color:$primary-color-bold;
+$link-font-color:$heading-font-color;
+
+@media (min-width: 768px) {
+    .container-fluid {
+        background-image: url("../../../assets/images/login-background.png");
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.login{
+            $head-font-color:$primary-color-light;
+            $background-color:"white";
+            $info-font-color:"black";
+            $button-color:$primary-color-light;
+            $link-font-color:$primary-color-light;
+        }
+        &.signup{
+            $head-font-color:white;
+            $background-color:$primary-color-light;
+            $info-font-color:"white";
+            $button-color:$primary-color-bold;
+            $link-font-color:$primary-color-bold;
+
+        }
+        .login-main {
+            // width: 63.6%;
+            height: 72.4%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-family: $primary-font;
+            box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.1);
+
+
+            .login-content {
+                width: 77.8%;
+                height: 78.4%;
+                @include flex-col-bw;
+
+                h1 {
+                    text-align: center;
+                    color: $heading-font-color;
+                    font-weight: 700;
+                    font-size: 3.5rem;
+                    line-height: 4.375rem;
+
+                }
+                p {
+                    text-align: center;
+                    @include text-small
+                }
+            }
+                .login-form {
+                    width: 100%;
+                    height: 64%;
+                    @include flex-col-bw;
+
+                    form {
+                        width: 100%;
+                        height: 100%;
+                        @include flex-col-bw;
+
+                        .login-inputs {
+                            width: 100%;
+                            height: 51%;
+                            @include flex-col-bw;
+
+                            input {
+
+                                // Nested selector for text & password inputs
+                                &[type="text"],
+                                &[type="password"] {
+                                    width: 100%;
+                                    height: 38.4%;
+                                    padding: 10px;
+                                    border: 1px solid #ccc;
+                                    border-radius: 12px;
+                                    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+
+                                    &::placeholder {
+                                        font-size: 0.8rem;
+                                        line-height: 1.56rem;
+                                        color: $input-color;
+                                    }
+                                }
+                            }
+                        }
+
+                        .login-buttons {
+                            width: 50%;
+                            height: 33%;
+                            min-width: 125px;
+                            @include flex-col-bw;
+
+                            button {
+                                width: 53.8%;
+                                height: 60%;
+                                background-color: $primary-color-light;
+                                border-radius: 12px;
+                                text-align: center;
+                                font-weight: 700 !important;
+                                @include text-small;
+                                max-width: 200px !important;
+                                color: black;
+                                border: none;
+                            }
+
+                            p {
+                                margin: 0px 0px;
+                                @include text-small;
+
+                                a {
+                                    color: $primary-color-light;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+
+
+                    }
+
+
+                }
+            
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .container-fluid {
+        background-image: url("../../../assets/images/login-background.png");
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+
+        .login-main {
+            width: 88.6%;
+            height: 37%;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-family: $primary-font;
+            box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.1);
+
+            .login-content {
+                width: 83.8%;
+                height: 78.4%;
+                @include flex-col-bw;
+
+                h1 {
+                    text-align: center;
+                    color: $heading-font-color;
+                    font-weight: 700;
+                    font-size: 2.8rem;
+                    line-height: 3.25rem;
+
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 0.75rem;
+                    line-height: 0.83rem;
+                }
+            }
+
+            .login-form {
+                width: 100%;
+                height: 64%;
+                @include flex-col-bw;
+
+                form {
+                    width: 100%;
+                    height: 100%;
+                    @include flex-col-bw;
+
+                    .login-inputs {
+                        width: 100%;
+                        height: 51%;
+                        @include flex-col-bw;
+
+                        input {
+
+                            // Nested selector for text & password inputs
+                            &[type="text"],
+                            &[type="password"] {
+                                width: 100%;
+                                height: 38.4%;
+                                padding: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                                box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+
+                                &::placeholder {
+                                    font-size: 0.8rem;
+                                    line-height: 1.56rem;
+                                    color: $input-color;
+                                }
+
+                                &[type="password"]::-ms-reveal {
+                                    color: $primary-color-light;
+                                }
+                            }
+                        }
+                    }
+
+                    .login-buttons {
+                        width: 57%;
+                        height: 33%;
+                        min-width: 125px;
+                        @include flex-col-bw;
+
+                        button {
+                            width: 35.8%;
+                            height: 60%;
+                            background-color: $primary-color-light;
+                            border-radius: 4px;
+                            text-align: center;
+                            font-weight: 700 !important;
+                            color: black;
+                            font-size: 0.75rem;
+                            line-height: 0.83rem;
+                            letter-spacing: -0.75px;
+                            border: none;
+                        }
+
+                        p {
+                            font-size: 0.75rem;
+                            line-height: 0.83rem;
+                            letter-spacing: -0.75px;
+                            margin: 0px 0px;
+
+                            a {
+                                color: $primary-color-light;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+
+
+
+
+            }
+        }
+    }
+}

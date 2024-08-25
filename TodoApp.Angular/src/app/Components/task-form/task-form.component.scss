@@ -1,0 +1,94 @@
+@use "../../../styles.scss" as *;
+.task-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: 5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 4px #ebedef;
+    form {
+        display: flex;
+        gap: 2.1875rem; /* 35px */
+        flex-direction: column;
+        width: 90%;
+        height: fit-content;
+        margin: 20px 0px;
+        input[type="text"]{
+        width: 100%;
+            border-radius: 8px;
+            box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+            border: none;
+            outline: none;
+            &:focus{
+                outline: none;
+            }  
+        }
+        textarea{
+            height: 8.6875rem; /* 155px */
+            font-size: 1.25rem;
+            padding-left: 0.625rem; /* 10px */
+            padding-top: 0.625rem; /* 10px */
+            align-items: start;
+            box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+            border: none;
+            &:focus{
+                outline: none;
+            }  
+        }
+        select{
+            height: 3.375rem; /* 70px */
+            padding-left: 0.625rem; /* 10px */
+            font-size: 1.5rem;
+            box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+            border: none;
+            &:active{
+                outline: none;
+                border: none;
+            }
+        }
+    }
+   
+}
+.task-form.show {
+    display: flex;
+}
+
+
+
+
+
+.add-title {
+    height: 3.375rem; /* 70px */
+    padding-left: 0.625rem; /* 10px */
+    font-size: 1.5rem;
+}
+
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem; /* 20px */
+    justify-content: end;
+}
+
+.cancel, .save {
+    height: 3.75rem; /* 60px */
+    border: 2px solid #edb146;
+    font-size: 1.25rem; /* 20px */
+    border-radius: 10px;
+}
+
+.cancel {
+    width: 9.375rem; /* 150px */
+    background-color: white;
+}
+
+.save {
+    width: 8.125rem; /* 130px */
+    background-color: #edb146;
+}

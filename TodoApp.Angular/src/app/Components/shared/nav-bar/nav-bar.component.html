@@ -1,0 +1,32 @@
+<div class="container-fluid nav-bar d-flex flex-column p-0">
+    <div class="nav-content d-flex flex-md-column flex-sm-row justify-content-between align-items-center">
+        <div class="logo-container">
+            <app-logo></app-logo>
+        </div>
+        <div class=" option-container d-flex flex-md-column flex-sm-row align-items-center">
+            <button class="add-task d-flex align-items-center justify-content-center" (click)="showForm()">
+                <div class="button-text d-flex flex-row align-items-center justify-content-between">
+                    <p class="m-0 d-flex  align-items-center">Add Task</p>
+                    <span class="add-icon icon-Add d-flex text-center align-items-center justify-content-center"></span>
+                </div>
+            </button>
+            <button class="sign-out d-md-none d-sm-flex d-flex align-items-center justify-content-center" (click)="logout()">
+                Sign out<i class="icon-logout"></i>
+            </button>
+            <div class="nav-item-container d-none d-md-flex flex-column align-self-start w-100 d-sm-none">
+                <ul>
+                    @for (item of navLinks; track $index) {
+                    <li><a class="d-flex align-items-center justify-content-center" href="" routerLink={{item.path}} [class.link-active]="item.name==activeNavigation">{{item.name}}</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    <div class="custom-select-container d-md-none">
+        <select class="custom-select custom-select-sm" id="inputGroupSelect01" (change)="onNavigationSelect($event)">
+            <option *ngFor="let item of navLinks" [value]="item.path">{{ item.name }}</option>
+          </select>
+        
+    </div>
+</div>

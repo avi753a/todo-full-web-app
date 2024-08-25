@@ -1,0 +1,25 @@
+<div class="task-form-container">
+    <div class="task-form" >
+        <form [formGroup]="taskForm">
+            <input type="text" formControlName="name" placeholder="Add Title" class="add-title">
+            <textarea placeholder="Add description" class="add-description" id="description"
+                formControlName="description"></textarea>
+            <select name="status" id="" formControlName="statusId">
+                <option value=0 selected disabled >Status</option>
+                @for (item of statusList; track $index) {
+                    <option value={{item.id}}>{{item.name}}</option>
+                }
+            </select>
+            <select name="" id="" aria-placeholder="Priority" formControlName="priorityId" >
+                <option value=0 selected disabled >Priority</option>
+                @for (item of priorityList; track $index) {
+                    <option value={{item.id}}>{{item.name}}</option>
+                }
+            </select>
+            <div class="buttons">
+                <button class="cancel" (click)="onCancel()">Cancel</button>
+                <button (click)="onSubmit()" class="save">{{editMode?"Update":"Save"}}</button>
+            </div>
+        </form>
+    </div>
+</div>

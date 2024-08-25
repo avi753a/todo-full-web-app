@@ -1,0 +1,104 @@
+
+@use '../../../styles.scss' as *;
+
+@media screen and (min-width:768px) {
+    .stat-container{
+        height: 100%;
+        width: 100%;
+        .card{
+            width: 11.75rem;
+            height: 12.5rem;
+            &.card-active{
+                background-color: $primary-color-light;
+            }
+            
+            &.card-completed{
+                background-color: $primary-color-bold !important;
+            }
+            .stat-content{
+                width: 8.125rem;
+                height: 8.5rem;
+                span{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    img{
+                        object-fit: cover;
+                    }
+                }
+                .stat-info{
+                    color: white;
+                    height: 4rem;
+                    .percent{
+                        font-size: 2rem;
+                        font-weight: 700;
+                        margin: 0;
+                        text-align: center;
+                    }
+                    .text{
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin: 0;
+                        text-align: center;
+                        letter-spacing: -0.75px;
+                    }
+                }
+    
+            }
+    
+    
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .stat-container{
+        height: 100%;
+        width: 100%;
+        .card{
+            width: 47.2%;
+            height: 4.33rem;
+            &.card-active{
+                background-color: $primary-color-light;
+            }
+            
+            &.card-completed{
+                background-color: $primary-color-bold !important;
+            }
+            .stat-content{
+                width: 9rem;
+                height: 2.66rem;
+                span{
+                    width: 2rem;
+                    height: 2rem;
+                    img{
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .stat-info{
+                    color: white;
+                    height: 2.66rem;
+                    width: 5.41rem;
+
+                    .percent{
+                        font-size: 1.33rem;
+                        font-weight: 700;
+                        margin: 0;
+                        text-align: left;
+                    }
+                    .text{
+                        font-size: 0.66rem;
+                        font-weight: 400;
+                        margin: 0;
+                        text-align: left;
+                        letter-spacing: -0.75px;
+                    }
+                }
+    
+            }
+    
+    
+        }
+    }
+
+}

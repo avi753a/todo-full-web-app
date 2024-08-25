@@ -1,0 +1,30 @@
+<div class="task-item d-flex align-items-center" [class.completed]="isCompleted" (click)="toggleDetails()">
+    <div class="item-check-list d-flex flex-row align-items-center" >
+        <span [class.icon-tick-bold]="isCompleted" [class.icon-tick-light]="!isCompleted"></span>
+        <p>{{taskDetails.name}}</p>
+    </div>
+    <div class="detail-box d-none align-items-center justify-content-center" [class.show]="isInfoView" [class.completed]="isCompleted" >
+        <div class="task-detail d-flex flex-column justify-content-between align-items-center">
+            <div class="details d-flex flex-column justify-content-between">
+                <div class="title">
+                    <p class="title-name">{{taskDetails.name}}</p>
+                    <p class="title-time" [class.completed]="isCompleted" *ngIf="daysDifference===0">Added {{hourDifference}} hours ago</p>
+                    <p class="title-time" [class.completed]="isCompleted" *ngIf="daysDifference!==0">Added {{daysDifference}} days ago</p>
+
+                </div>
+                <div class="description">
+                    <p class="heading">Description</p>
+                    <p class="text">{{taskDetails.description}}</p>
+                </div>
+            </div>
+            <div class="buttons d-flex flex-row justify-content-between w-100" >
+                <span [class.icon-tick-bold]="isCompleted" [class.icon-tick-light]="!isCompleted" (click)="updateStatus()" >
+                </span>
+                <div  class="update-delete-buttons" [class.completed]="isCompleted">
+                    <span class="icon-edit" [class.hide]="isCompleted" (click)="editTask(taskDetails.id)"></span>
+                    <span class="icon-delete" (click)="deleteItem(taskDetails.id)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
